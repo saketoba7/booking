@@ -1,0 +1,9 @@
+ <% if user_signed_in? %>
+  <h1>マイページ</h1>
+<img src=<%= @user.image %> class = "icon_image">
+
+  <%= @user.name %>
+  <%= @user.email %>
+  <%= @user.profile %>
+<%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+ <% end %>
