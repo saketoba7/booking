@@ -1,0 +1,27 @@
+<h1>Posts#new</h1>
+
+<%= form_for(@room, url: rooms_path) do |f| %>
+    <div>
+        <%= f.label :room_name%><br>
+        <%= f.text_field :room_name, autofocus: true %>
+    </div>
+    <div>
+        <%= f.label :room_price %><br>
+        <%= f.text_field :room_price, autofocus: true %>
+    </div>
+    <div>
+        <%= f.label :room_address %><br>
+        <%= f.text_area :room_address %>
+    </div>
+    <div>
+        <%= f.label :content %><br>
+        <%= f.text_area :content %>
+    </div>
+    <div>
+     <%= f.label :image %><br/>
+        <%= f.file_field :image %>
+    </div>
+    <div><%= f.submit "投稿する" %></div>
+<% end %>
+
+

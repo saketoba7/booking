@@ -8,4 +8,8 @@ class User < ApplicationRecord
   validates :profile, presence: true, length: { maximum: 50 }
  
   mount_uploader :image, ImageUploader
+
+  
+  has_many :rooms, dependent: :destroy 
+
 end

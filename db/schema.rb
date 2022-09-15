@@ -10,20 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_10_073301) do
+ActiveRecord::Schema.define(version: 2022_09_13_082630) do
 
   create_table "rooms", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
-    t.integer "user_id"
+    t.string "room_name"
     t.integer "room_price"
     t.datetime "start_day"
     t.datetime "finish_day"
     t.string "room_address"
-    t.integer "users_id", null: false
+    t.text "content"
+    t.string "image"
+    t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["users_id"], name: "index_rooms_on_users_id"
+    t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -41,5 +41,5 @@ ActiveRecord::Schema.define(version: 2022_09_10_073301) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "rooms", "users", column: "users_id"
+  add_foreign_key "rooms", "users"
 end

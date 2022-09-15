@@ -6,4 +6,5 @@
   <%= @user.email %>
   <%= @user.profile %>
 <%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+<%= link_to "room", controller: "rooms", action: "new" %>
  <% end %>

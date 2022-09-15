@@ -1,0 +1,27 @@
+
+ <h1>一覧</h1>
+<% @rooms.each do |room| %>
+   <table>
+    <thead>
+        <tr>
+            <th>roomname</th>
+            <th>price</th>
+            <th>address</th>
+            <th>content</th>
+            <th>image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% @rooms.each do |room| %>
+            <tr>
+                <td><%= room.name %></td>
+                <td><%= room.price %></td>
+                <td><%= room.address %></td>
+                <td><%= room.content %></td>
+                <td><%= room.image %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+ <% end %>
+
