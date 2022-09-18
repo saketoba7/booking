@@ -9,6 +9,13 @@
                 <div><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></div>
                 <div><%= link_to 'マイページ', user_path(current_user) %></div>
                 <div><%= link_to "編集", edit_user_registration_path %></div>
+                <%= link_to 'ルーム一覧', controller: 'rooms', action: 'index' %>
+               <div class="room_search">
+                <%= form_with url: rooms_path, method: :get, local: true do |form| %>
+                <%= form.text_field :search %>
+                <%= form.submit 'Search', name: nil %>
+                <% end %>
+                </div>
                 <% else %>
                 <div><%= link_to 'ログイン', new_user_session_path %></div>
                 <div><%= link_to 'アカウント作成', new_user_registration_path %></div>

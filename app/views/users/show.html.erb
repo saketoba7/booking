@@ -1,5 +1,6 @@
- <% if user_signed_in? %>
+  <% if user_signed_in? %>
   <h1>マイページ</h1>
+ 
 <img src=<%= @user.image %> class = "icon_image">
 
   <%= @user.name %>

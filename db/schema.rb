@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2022_09_13_082630) do
     t.datetime "start_day"
     t.datetime "finish_day"
     t.string "room_address"
-    t.text "content"
+    t.text "room_content"
     t.string "image"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false

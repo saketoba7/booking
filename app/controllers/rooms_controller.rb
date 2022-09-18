@@ -3,30 +3,29 @@ class RoomsController < ApplicationController
 
   def new
     @room = Room.new
-   
   end
 
   def create
-    @room = Room.new(room_params)
-    @Room.user_id = current_user.id
+    @room = Room.new(room_params) 
+    @room.user_id = current_user.id 
     if @room.save
-     redirect_to new_room_path
-    else 
-     render :new 
+      redirect_to root_path(@room)
+    else
+      render 'new'
     end
   end
 
   def index
-    @room = Room.all
+    @rooms = Room.all
+    @rooms = @rooms.where('room_name LIKE ?', "%#{params[:search]}%") if params[:search].present?
   end
 
   def show
     @room = Room.find(params[:id])
   end
 
-
   private
   def room_params
-   params.require(:room).permit(:room_name, :room_price, :room_address, :content, :image)
+   params.require(:room).permit(:room_name, :room_price, :room_address, :room_content, :image)
   end
 end

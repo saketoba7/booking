@@ -6,7 +6,7 @@ class CreateRooms < ActiveRecord::Migration[6.1]
       t.datetime :start_day
       t.datetime :finish_day
       t.string :room_address
-      t.text :content
+      t.text :room_content
       t.string :image
 
       t.references :user, foreign_key: true, null: false

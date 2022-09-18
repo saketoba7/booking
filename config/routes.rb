@@ -6,8 +6,7 @@ Rails.application.routes.draw do
     devise_for :users,
     controllers: { registration: 'registration' }
     get '/users/:id', to: 'users#show', as: 'user'
-    get 'rooms/:id', to: 'rooms#new', as: 'room'
+  
     resources :users
-    resources :rooms , only: [:create, :new, :edit, :update, :destroy]
-    
+    resources :rooms, only: [:create, :new, :show, :index, :edit, :update, :destroy]
 end
