@@ -2,7 +2,7 @@
 <div class="container show">
     <div class="show-detail">
         <div class="show-image">
-          <img src=<%= @room.image %> >
+          <img src=<%= @room.image %> class="room_image" >
         </div>
         <div class="show-profile">
             <div class="show-name">
@@ -12,6 +12,9 @@
                  <p><%= @room.room_content %></p>
             </div>
         </div>
+        <button class="show-btn create-btn">
+            <%= link_to "予約する", new_room_reservation_path(@room) ,class: "btn-font" %>
+        </button>
     </div> 
 </div>
 

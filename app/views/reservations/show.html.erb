@@ -1,0 +1,18 @@
+<div class="container show">
+    <div class="show-detail">
+        <div class="show-image">
+          <img src=<%= @reservation.room.image %> >
+        </div>
+        <div class="show-profile">
+            <div class="show-name">
+                <p><%= @reservation.room.room_name %></p>
+                <p><%= @reservation.room.room_price %></p>
+                 <p><%= @reservation.room.room_address %></p>
+                 <p><%= @reservation.room.room_content %></p>
+            </div>
+        </div>
+         <button class="show-btn create-btn">
+            <%= link_to "予約済みルーム一覧", reservations_path ,class: "btn-font" %>
+        </button>
+    </div> 
+</div>
