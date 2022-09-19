@@ -1,5 +1,14 @@
- 
- <h1>一覧</h1>
+<div class="room-index">
+<h1>一覧</h1>
+ <table>
+    <thead>
+            <tr align="center">
+                <th>ルーム名</th>
+                <th>ルーム紹介</th>
+                <th>料金</th>
+                <th>作成日</th>
+            </tr>
+        </thead>
  <tbody>
             <% @rooms.each do |room| %>
 
@@ -11,5 +20,5 @@
                 </tr>
                 <%end%>   
         </tbody>
-   
-
+ </table>
+</div>

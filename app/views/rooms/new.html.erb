@@ -1,27 +1,29 @@
-
-
+<div class = "new container reservation">
+  <div class="form-text">
+   <h2>予約項目を入力する</h2>
+  </div>
+ 
 <%= form_for @room do |f| %>
     <div>
-        <%= f.label :room_name%><br>
+        <%= f.label :room_name,"ルーム名" %><br>
         <%= f.text_field :room_name %>
     </div>
     <div>
-        <%= f.label :room_price %><br>
+        <%= f.label :room_price,"料金"  %><br>
         <%= f.text_field :room_price %>
     </div>
     <div>
-        <%= f.label :room_address %><br>
+        <%= f.label :room_address,"住所" %><br>
         <%= f.text_area :room_address %>
     </div>
     <div>
-        <%= f.label :room_content %><br>
+        <%= f.label :room_content,"中身" %><br>
         <%= f.text_area :room_content %>
     </div>
     <div>
-        <%= f.label :image %><br/>
+        <%= f.label :image ,"画像"  %><br/>
         <%= f.file_field :image %>
     </div>
     <div><%= f.submit "投稿する" %></div>
 <% end %>
-
-
+</div>
