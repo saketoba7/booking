@@ -1,6 +1,5 @@
 class RoomsController < ApplicationController
-  before_action :authenticate_user!
-
+ 
   def new
     @room = Room.new
   end

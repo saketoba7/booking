@@ -6,7 +6,7 @@
      <table class="form-table">
        <tr>
          <th><%= f.label :start_date ,"開始日" %></th>
-         <td><%= f.date_field :start_date %></td>
+         <td><%= f.date_field :start_date, min: Date.today %></td>
        </tr>
        <tr>
          <th><%= f.label :end_date ,"終了日" %></th>
@@ -14,7 +14,7 @@
        </tr>
        <tr>
          <th><%= f.label :num_people ,"人数" %></th>
-         <td><%= f.number_field :num_people %></td>
+         <td><%= f.number_field :num_people, in: 1..100 %></td>
        </tr>
      </table>
      <div class="new-form">

@@ -2,6 +2,8 @@
         <table>
             <% @reservations.each do |reservation| %>
                 <tr>
+                 <th>ルーム名</th>
+                    <th><%= reservation.room.room_name %></th>
                     <th>開始日</th>
                     <th><%= reservation.start_date %></th>
                      <th>終了日</th>
