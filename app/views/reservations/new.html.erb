@@ -10,7 +10,7 @@
        </tr>
        <tr>
          <th><%= f.label :end_date ,"終了日" %></th>
-         <td><%= f.date_field :end_date %></td>
+         <td><%= f.date_field :end_date, min: Date.today %></td>
        </tr>
        <tr>
          <th><%= f.label :num_people ,"人数" %></th>
