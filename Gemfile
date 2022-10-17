@@ -62,5 +62,5 @@ gem 'devise'
 gem 'carrierwave'
 gem "mini_magick"
 gem 'rails-i18n'
-gem 'devise-i18n-views'
-gem 'simple_calendar', '~> 2.0'
+gem 'jquery-rails'
+gem 'flatpickr'

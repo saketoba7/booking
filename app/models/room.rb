@@ -7,6 +7,5 @@ class Room < ApplicationRecord
     validates :room_address, presence: true
     validates :room_content, presence: true
     validates :room_name, presence: true
-
-   
+    
 end
