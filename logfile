@@ -1,0 +1,24 @@
+2022-09-02 17:07:07.541 JST [62649] LOG:  starting PostgreSQL 14.2 on aarch64-apple-darwin21.3.0, compiled by Apple clang version 13.0.0 (clang-1300.0.29.30), 64-bit
+2022-09-02 17:07:07.544 JST [62649] LOG:  could not bind IPv6 address "::1": Address already in use
+2022-09-02 17:07:07.544 JST [62649] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-09-02 17:07:07.544 JST [62649] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2022-09-02 17:07:07.544 JST [62649] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-09-02 17:07:07.544 JST [62649] WARNING:  could not create listen socket for "localhost"
+2022-09-02 17:07:07.544 JST [62649] FATAL:  could not create any TCP/IP sockets
+2022-09-02 17:07:07.544 JST [62649] LOG:  database system is shut down
+2022-09-02 22:37:19.306 JST [79841] LOG:  starting PostgreSQL 14.5 (Homebrew) on aarch64-apple-darwin21.6.0, compiled by Apple clang version 13.1.6 (clang-1316.0.21.2.5), 64-bit
+2022-09-02 22:37:19.307 JST [79841] LOG:  could not bind IPv6 address "::1": Address already in use
+2022-09-02 22:37:19.307 JST [79841] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-09-02 22:37:19.307 JST [79841] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2022-09-02 22:37:19.307 JST [79841] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-09-02 22:37:19.307 JST [79841] WARNING:  could not create listen socket for "localhost"
+2022-09-02 22:37:19.307 JST [79841] FATAL:  could not create any TCP/IP sockets
+2022-09-02 22:37:19.308 JST [79841] LOG:  database system is shut down
+2022-09-02 22:38:59.225 JST [79920] LOG:  starting PostgreSQL 14.5 (Homebrew) on aarch64-apple-darwin21.6.0, compiled by Apple clang version 13.1.6 (clang-1316.0.21.2.5), 64-bit
+2022-09-02 22:38:59.227 JST [79920] LOG:  could not bind IPv6 address "::1": Address already in use
+2022-09-02 22:38:59.227 JST [79920] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-09-02 22:38:59.227 JST [79920] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2022-09-02 22:38:59.227 JST [79920] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2022-09-02 22:38:59.227 JST [79920] WARNING:  could not create listen socket for "localhost"
+2022-09-02 22:38:59.227 JST [79920] FATAL:  could not create any TCP/IP sockets
+2022-09-02 22:38:59.227 JST [79920] LOG:  database system is shut down

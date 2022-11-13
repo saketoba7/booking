@@ -1,0 +1,25 @@
+<div class="room-index">
+
+<h1>一覧</h1>
+ <table>
+    <thead>
+            <tr align="center">
+                 <th>ルーム名</th>
+                <th>ルーム住所</th>
+                <th>ルーム紹介</th>
+                <th>料金</th>
+            </tr>
+        </thead>
+ <tbody>
+            <% @rooms.each do |room| %>
+
+             <tr>
+                   <td><%= link_to room.room_name, room_path(room.id) %></td>
+                    <td><%= room.room_address %></td>
+                    <td><%= room.room_content %></td>
+                    <td><%= room.room_price %></td>
+                </tr>
+                <%end%>   
+        </tbody>
+ </table>
+</div>

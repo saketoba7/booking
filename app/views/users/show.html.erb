@@ -1,0 +1,16 @@
+ <div class="container show">
+    <div class="show-detail">
+  <% if user_signed_in? %>
+  <h1>マイページ</h1>
+ 
+<img src=<%= @user.image %> class = "icon_image">
+
+  <%= @user.name %>
+  <%= @user.email %>
+  <%= @user.profile %>
+<%= link_to 'ログアウト', destroy_user_session_path, method: :delete %>
+<%= link_to '予約部屋', controller: 'reservations', action: 'index' %>
+<%= link_to "部屋の登録", controller: "rooms", action: "new" %>
+ <% end %>
+  </div> 
+   </div> 

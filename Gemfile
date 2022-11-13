@@ -48,9 +48,23 @@ group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver', '>= 4.0.0.rc1'
+  gem 'pry-rails', group: :development
+  gem 'pry-doc'
+  gem "debug", github: "ruby/debug"
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem "net-smtp"
+gem 'devise'
+gem 'carrierwave'
+gem "mini_magick"
+gem 'rails-i18n'
+gem 'jquery-rails'
+gem "pry-rails"
+gem 'faker'
+gem 'gimei'
+gem 'rubocop-faker'
+gem 'sanitize'

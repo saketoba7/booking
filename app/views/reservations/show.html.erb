@@ -1,0 +1,28 @@
+<h1>ルーム詳細</h1>
+
+<table class="container show">
+  <tr>
+    <th>ルーム名</th>
+    <td><%= @reservation.room.room_name %></td>
+  </tr>
+  <tr>
+    <th>価格</th>
+    <td><%= @reservation.room.room_price %></td>
+  </tr>
+  <tr>
+    <th>住所</th>
+    <td><%= @reservation.room.room_address %></td>
+  </tr>
+  <tr>
+    <th>ルームの特徴</th>
+    <td><%= @reservation.room.room_content %></td>
+  </tr>
+  <tr>
+    <th>ルーム画像</th>
+    <td><img src=<%= @reservation.room.image %> ></td>
+  </tr>
+  <tr>
+    <th>完了</th>
+    <td><%= link_to "予約済みルーム一覧", reservations_path ,class: "btn-font" %></td>
+  </tr>
+</table>

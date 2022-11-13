@@ -1,0 +1,55 @@
+<div class="top">
+    <div class="main-top">
+        <div class="container">
+            <div class="row form-box">
+                <div class="form-area">
+   <h3>Potepan Shareでまだ体験したことのない旅をしよう</h3>
+                    <%= link_to 'TOPページ', root_path %>
+               <% if user_signed_in? %>
+                <div><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></div>
+                <div><%= link_to 'マイページ', user_path(current_user) %></div>
+                <div><%= link_to "編集", edit_user_registration_path %></div>
+                <%= link_to 'ルーム一覧', controller: 'rooms', action: 'index' %>
+
+        
+<div class="serch_form">
+    <%= form_with url: search_rooms_path,method: :get, local: true do |f| %>
+  <%= f.text_field :keyword %>
+    <%= f.submit "検索" %>
+    <% end %>
+</div>
+                <% else %>
+                <div><%= link_to 'ログイン', new_user_session_path %></div>
+                <div><%= link_to 'アカウント作成', new_user_registration_path %></div>
+                <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="area-contents">
+            <h1 class="section-title">おすすめのエリア</h1>
+            <div class="row area-items">
+                <div class="area-box">
+                    <span><%= link_to "東京", "/search?serch=東京&commit=探す" %></span>
+                    <img src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_tokyo.jpg" alt="tokyo">
+                </div>
+                <div class="area-box">
+                    <span><%= link_to "大阪", "/search?serch=大阪&commit=探す" %></span>
+                    <img src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_osaka.jpg" alt="osaka">
+                </div>
+                <div class="area-box">
+                    <span><%= link_to "京都", "/search?serch=京都&commit=探す" %></span>
+                    <img src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_kyoto.jpg" alt="kyoto">
+                </div>
+                <div class="area-box">
+                    <span><%= link_to "札幌", "/search?serch=札幌&commit=探す" %></span>
+                    <img src="https://presite-potepancamp-rails-02.herokuapp.com/assets/img_sapporo.jpg" alt="sapporo">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,16 @@
+ <div class="room-index reservations">
+        <table>
+            <% @reservations.each do |reservation| %>
+                <tr>
+                 <th>ルーム名</th>
+                    <th><%= reservation.room.room_name %></th>
+                    <th>開始日</th>
+                    <th><%= reservation.start_date.strftime("%Y年%m月%d日") %></th>
+                     <th>終了日</th>
+                    <th><%= reservation.end_date.strftime("%Y年%m月%d日") %></th>
+                   <th>予約人数</th>
+                    <th><%= reservation.num_people %></th>
+                </tr>
+            <%end%>    
+        </table>
+</div>
