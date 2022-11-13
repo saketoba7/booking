@@ -1,5 +1,6 @@
 class RoomsController < ApplicationController
 
+
   def new
     @room = Room.new
   end
@@ -14,9 +15,19 @@ class RoomsController < ApplicationController
     end
   end
 
+  def search
+    if params[:keyword].present?
+      @rooms = Room.where('room_address LIKE ?', "%#{params[:keyword]}%").or(Room.where('room_name LIKE ?', "%#{params[:keyword]}%"))
+      .or(Room.where('room_content LIKE ?', "%#{params[:keyword]}%")).or(Room.where('room_price LIKE ?', "%#{params[:keyword]}%"))
+      @keyword = params[:keyword]
+    else
+      @rooms = Room.all
+    end
+    
+  end
+
   def index
     @rooms = Room.all
-    @rooms = @rooms.where('room_name LIKE ?', "%#{params[:search]}%") if params[:search].present?
   end
 
   def show
@@ -27,4 +38,5 @@ class RoomsController < ApplicationController
   def room_params
    params.require(:room).permit(:room_name, :room_price, :room_address, :room_content, :image)
   end
+
 end

@@ -1,4 +1,5 @@
 class Room < ApplicationRecord
+
     belongs_to :user
     has_many :reservations
 
@@ -7,5 +8,13 @@ class Room < ApplicationRecord
     validates :room_address, presence: true
     validates :room_content, presence: true
     validates :room_name, presence: true
-    
+
+    def self.search(keyword)
+        if keyword != ""
+          Room.where('text LIKE(?)', "%#{keyword}%")
+        else
+          Room.all
+        end
+      end
+
 end

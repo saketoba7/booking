@@ -63,4 +63,8 @@ gem 'carrierwave'
 gem "mini_magick"
 gem 'rails-i18n'
 gem 'jquery-rails'
-gem 'flatpickr'
+gem "pry-rails"
+gem 'faker'
+gem 'gimei'
+gem 'rubocop-faker'
+gem 'sanitize'

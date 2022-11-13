@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2022_09_18_103914) do
     t.string "room_name"
     t.integer "room_price"
     t.datetime "start_day"
-    t.datetime "finish_day"
+    t.datetime "end_day"
     t.string "room_address"
     t.text "room_content"
     t.string "image"

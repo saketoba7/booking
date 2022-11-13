@@ -3,19 +3,21 @@
         <div class="container">
             <div class="row form-box">
                 <div class="form-area">
-                    <h3>Potepan Shareでまだ体験したことのない旅をしよう</h3>
+   <h3>Potepan Shareでまだ体験したことのない旅をしよう</h3>
                     <%= link_to 'TOPページ', root_path %>
                <% if user_signed_in? %>
                 <div><%= link_to 'ログアウト', destroy_user_session_path, method: :delete %></div>
                 <div><%= link_to 'マイページ', user_path(current_user) %></div>
                 <div><%= link_to "編集", edit_user_registration_path %></div>
                 <%= link_to 'ルーム一覧', controller: 'rooms', action: 'index' %>
-               <div class="room_search">
-                <%= form_with url: rooms_path, method: :get, local: true do |form| %>
-                <%= form.text_field :search %>
-                <%= form.submit 'Search', name: nil %>
-                <% end %>
-                </div>
+
+        
+<div class="serch_form">
+    <%= form_with url: search_rooms_path,method: :get, local: true do |f| %>
+  <%= f.text_field :keyword %>
+    <%= f.submit "検索" %>
+    <% end %>
+</div>
                 <% else %>
                 <div><%= link_to 'ログイン', new_user_session_path %></div>
                 <div><%= link_to 'アカウント作成', new_user_registration_path %></div>
@@ -24,6 +26,7 @@
             </div>
         </div>
     </div>
+
     <div class="container">
         <div class="area-contents">
             <h1 class="section-title">おすすめのエリア</h1>
@@ -48,4 +51,5 @@
         </div>
     </div>
 </div>
+
 

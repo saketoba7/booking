@@ -13,6 +13,7 @@ module Booking
     config.load_defaults 6.1
     config.time_zone = 'Tokyo'
     config.active_record.default_timezone = :local
+    config.active_record.schema_format = :sql
 
     # Configuration for the application, engines, and railties goes here.
     #
